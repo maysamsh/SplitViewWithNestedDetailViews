@@ -22,11 +22,9 @@ class FirstViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let controller = (segue.destination as! UINavigationController).topViewController as! SecondViewController
-        controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
+        let controller = segue.destination
+        controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
         controller.navigationItem.leftItemsSupplementBackButton = true
-        
-        print("prepare")
     }
     /*
     // MARK: - Navigation
